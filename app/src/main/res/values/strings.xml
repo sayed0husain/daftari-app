@@ -1,0 +1,131 @@
+<resources>
+    <string name="app_name">دفتري</string>
+
+    <string name="nav_home">الرئيسية</string>
+    <string name="nav_subjects">المواد</string>
+    <string name="nav_schedule">الجدول</string>
+    <string name="nav_behavior">السلوك</string>
+    <string name="nav_settings">الإعدادات</string>
+
+    <string name="onboarding_title">أهلاً بك في دفتري</string>
+    <string name="onboarding_desc">دفتري يساعدك تنظم موادك الدراسية، درجاتك، اختباراتك، واجباتك، حضورك وسلوكك في مكان واحد. كل بياناتك تُحفظ على جهازك فقط.</string>
+    <string name="onboarding_notif_title">تفعيل التذكيرات</string>
+    <string name="onboarding_notif_desc">فعّل الإشعارات عشان نذكّرك بمواعيد الاختبارات والواجبات قبل ما تفوتك.</string>
+    <string name="onboarding_enable_notifications">تفعيل الإشعارات</string>
+    <string name="onboarding_skip">تخطي</string>
+    <string name="onboarding_next">التالي</string>
+    <string name="onboarding_add_now_title">هل تحب تبدأ الآن؟</string>
+    <string name="onboarding_add_now_desc">تقدر تضيف موادك الدراسية والجدول الأسبوعي الآن، أو تتركها لوقت لاحق.</string>
+    <string name="onboarding_add_now">إضافة المواد والجدول الآن</string>
+    <string name="onboarding_later">لاحقًا</string>
+
+    <string name="home_welcome">مرحبًا بك</string>
+    <string name="home_upcoming_exams">الاختبارات القادمة</string>
+    <string name="home_pending_homework">الواجبات القادمة</string>
+    <string name="home_upcoming_checks">مواعيد التصحيح القادمة</string>
+    <string name="home_no_data">لا يوجد شيء حاليًا</string>
+
+    <string name="subjects_title">المواد الدراسية</string>
+    <string name="add_subject">إضافة مادة</string>
+    <string name="subject_name">اسم المادة</string>
+    <string name="subject_color">لون المادة</string>
+    <string name="subject_weekly_hours">عدد الحصص أسبوعيًا</string>
+
+    <string name="subject_details_title">تفاصيل المادة</string>
+    <string name="tab_grades">الدرجات</string>
+    <string name="tab_exams">الاختبارات</string>
+    <string name="tab_homework">الواجبات</string>
+    <string name="tab_requirements">المتطلبات</string>
+    <string name="tab_attendance">الحضور</string>
+
+    <string name="average_label">المعدل</string>
+    <string name="add_grade">إضافة درجة</string>
+    <string name="grade_name">اسم الدرجة</string>
+    <string name="grade_obtained">الدرجة المحصلة</string>
+    <string name="grade_total">من (الدرجة الكاملة)</string>
+
+    <string name="add_exam">إضافة اختبار</string>
+    <string name="edit_exam">تعديل اختبار</string>
+    <string name="exam_name">اسم الاختبار</string>
+    <string name="exam_date">موعد الاختبار</string>
+    <string name="exam_notes">ملاحظات</string>
+    <string name="exam_reminder">تفعيل التذكير</string>
+    <string name="exam_reminder_before">التذكير قبل الموعد بـ</string>
+    <string name="exam_limit_reached_title">تنبيه</string>
+    <string name="exam_limit_reached_msg">هذه المادة عندها اختباران مسجّلان بالفعل. هل تريد بالتأكيد إضافة اختبار ثالث؟</string>
+    <string name="confirm">تأكيد</string>
+    <string name="cancel">إلغاء</string>
+    <string name="delete">حذف</string>
+    <string name="edit">تعديل</string>
+    <string name="save">حفظ</string>
+
+    <string name="add_homework">إضافة واجب</string>
+    <string name="homework_desc">وصف الواجب</string>
+    <string name="homework_due">موعد التسليم</string>
+    <string name="homework_done">مكتمل</string>
+    <string name="homework_not_done">غير مكتمل</string>
+
+    <string name="notebook_status">حالة الدفتر</string>
+    <string name="copybook_status">حالة الكراسة</string>
+    <string name="complete">مكتمل</string>
+    <string name="incomplete">غير مكتمل</string>
+    <string name="copybook_pages_input">أدخل الصفحات الناقصة (مثال: 10-25 أو 3,7,12)</string>
+    <string name="copybook_required_pages">الصفحات المطلوبة</string>
+    <string name="copybook_missing_count">عدد الصفحات الناقصة: %1$d</string>
+    <string name="subject_behavior_score">درجة سلوك المادة (من 40)</string>
+
+    <string name="attendance_present">حاضر</string>
+    <string name="attendance_absent">غائب</string>
+    <string name="attendance_late">متأخر</string>
+    <string name="attendance_rate">نسبة الحضور</string>
+    <string name="add_notebook_check">إضافة موعد تصحيح</string>
+    <string name="notebook_check_desc">وصف المطلوب</string>
+    <string name="notebook_check_date">تاريخ التصحيح</string>
+
+    <string name="schedule_title">الجدول الأسبوعي</string>
+    <string name="add_schedule_slot">إضافة حصة</string>
+    <string name="schedule_day">اليوم</string>
+    <string name="schedule_start">وقت البداية</string>
+    <string name="schedule_end">وقت النهاية</string>
+    <string name="schedule_conflict_title">تعارض بالجدول</string>
+    <string name="schedule_conflict_msg">يوجد تعارض مع حصة أخرى بنفس اليوم والوقت. هل تريد المتابعة؟</string>
+
+    <string name="behavior_title">درجة السلوك</string>
+    <string name="behavior_general">السلوك العام</string>
+    <string name="behavior_per_subject">سلوك المواد</string>
+    <string name="add_behavior_period">إضافة فترة سلوك</string>
+    <string name="behavior_period_name">اسم الفصل/الفترة</string>
+    <string name="behavior_score">الدرجة (من 40)</string>
+
+    <string name="settings_title">الإعدادات</string>
+    <string name="settings_theme">المظهر</string>
+    <string name="theme_light">فاتح</string>
+    <string name="theme_dark">داكن</string>
+    <string name="theme_system">حسب النظام</string>
+    <string name="settings_language">اللغة</string>
+    <string name="lang_ar">العربية</string>
+    <string name="lang_en">English</string>
+    <string name="settings_app_lock">قفل التطبيق (اختياري)</string>
+    <string name="settings_backup">نسخة احتياطية</string>
+    <string name="settings_export">تصدير نسخة احتياطية</string>
+    <string name="settings_import">استيراد نسخة احتياطية</string>
+    <string name="settings_notifications">الإشعارات</string>
+
+    <string name="reminder_day">يوم</string>
+    <string name="reminder_two_days">يومين</string>
+    <string name="reminder_hours">ساعات</string>
+    <string name="reminder_hours_value">عدد الساعات</string>
+
+    <string name="days_sunday">الأحد</string>
+    <string name="days_monday">الاثنين</string>
+    <string name="days_tuesday">الثلاثاء</string>
+    <string name="days_wednesday">الأربعاء</string>
+    <string name="days_thursday">الخميس</string>
+    <string name="days_friday">الجمعة</string>
+    <string name="days_saturday">السبت</string>
+
+    <string name="notif_channel_name">تذكيرات دفتري</string>
+    <string name="notif_exam_title">تذكير: اختبار %1$s</string>
+    <string name="notif_homework_title">تذكير: واجب %1$s</string>
+    <string name="notif_check_title">تذكير: تصحيح %1$s</string>
+</resources>
