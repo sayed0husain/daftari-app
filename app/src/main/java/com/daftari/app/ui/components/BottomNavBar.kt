@@ -31,7 +31,7 @@ val bottomItems = listOf(
 )
 
 @Composable
-fun BottomNavBar(navController: NavController) {
+fun DaftariBottomBar(navController: NavController) {
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentDestination = navBackStackEntry?.destination
 
