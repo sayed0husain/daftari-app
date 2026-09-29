@@ -11,6 +11,7 @@ import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination.Companion.hierarchy
@@ -22,22 +23,24 @@ import com.daftari.app.ui.navigation.Routes
 data class BottomItem(val route: String, val labelRes: Int, val icon: androidx.compose.ui.graphics.vector.ImageVector)
 
 val bottomItems = listOf(
-    BottomItem(Routes.HOME, R.string.nav_home, Icons.Filled.Home),
-    BottomItem(Routes.SUBJECTS, R.string.nav_subjects, Icons.Filled.MenuBook),
-    BottomItem(Routes.SCHEDULE, R.string.nav_schedule, Icons.Filled.CalendarMonth),
-    BottomItem(Routes.BEHAVIOR, R.string.nav_behavior, Icons.Filled.EmojiEvents),
-    BottomItem(Routes.SETTINGS, R.string.nav_settings, Icons.Filled.Settings),
+    BottomItem(Routes.HOME, R.string.nav_home, Icons.Default.Home),
+    BottomItem(Routes.SUBJECTS, R.string.nav_subjects, Icons.Default.MenuBook),
+    BottomItem(Routes.SCHEDULE, R.string.nav_schedule, Icons.Default.CalendarMonth),
+    BottomItem(Routes.BEHAVIOR, R.string.nav_behavior, Icons.Default.EmojiEvents),
+    BottomItem(Routes.SETTINGS, R.string.nav_settings, Icons.Default.Settings)
 )
 
 @Composable
-fun DaftariBottomBar(navController: NavController) {
-    val backStackEntry by navController.currentBackStackEntryAsState()
-    val currentDestination = backStackEntry?.destination
+fun BottomNavBar(navController: NavController) {
+    val navBackStackEntry by navController.currentBackStackEntryAsState()
+    val currentDestination = navBackStackEntry?.destination
 
     NavigationBar {
         bottomItems.forEach { item ->
             val selected = currentDestination?.hierarchy?.any { it.route == item.route } == true
             NavigationBarItem(
+                icon = { Icon(item.icon, contentDescription = null) },
+                label = { Text(stringResource(item.labelRes)) },
                 selected = selected,
                 onClick = {
                     navController.navigate(item.route) {
@@ -47,9 +50,7 @@ fun DaftariBottomBar(navController: NavController) {
                         launchSingleTop = true
                         restoreState = true
                     }
-                },
-                icon = { Icon(item.icon, contentDescription = null) },
-                label = { Text(stringResource(item.labelRes)) }
+                }
             )
         }
     }
