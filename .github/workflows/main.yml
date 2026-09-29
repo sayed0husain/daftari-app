@@ -3,7 +3,15 @@ name: Build Daftari APK
 on:
   push:
     branches: [ "main" ]
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: "Release tag for the direct APK download"
+        required: true
+        default: "v1.0.0"
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -11,26 +19,29 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: "17"
-
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
         with:
           gradle-version: "8.9"
-
       - name: Accept Android SDK licenses
         run: yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
-
       - name: Build debug APK
         run: gradle assembleDebug --no-daemon
-
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
           name: daftari-debug-apk
           path: app/build/outputs/apk/debug/app-debug.apk
+      - name: Publish direct APK release
+        if: github.event_name == 'workflow_dispatch'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ inputs.release_tag }}
+          name: Daftari ${{ inputs.release_tag }}
+          generate_release_notes: true
+          files: app/build/outputs/apk/debug/app-debug.apk
